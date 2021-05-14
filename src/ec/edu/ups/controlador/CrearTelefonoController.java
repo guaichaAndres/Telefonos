@@ -8,18 +8,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.TelefonoDAO;
 import ec.edu.ups.dao.UsuarioDAO;
+import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.modelo.Usuario;
 
-@WebServlet("/CrearUsuarioController")
-public class CrearUsuarioController extends HttpServlet {
+@WebServlet("/CrearTelefonoController")
+public class CrearTelefonoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UsuarioDAO usuarioDao;
-	private Usuario usuario;
+	private TelefonoDAO telefonoDao;
+	private Telefono telefono;
 	
-	public CrearUsuarioController() {
-		usuarioDao = DAOFactory.getFactory().getUsuarioDAO();
-		usuario = new Usuario();
+	public CrearTelefonoController() {
+		telefonoDao = DAOFactory.getFactory().getTelefonoDAO();
+		telefono = new Telefono();
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -27,14 +29,12 @@ public class CrearUsuarioController extends HttpServlet {
 		
 		String url = null;
 		try {
-			usuario.setId(Integer.valueOf(request.getParameter("id")));
-			usuario.setCedula(request.getParameter("cedula"));
-			usuario.setNombre(request.getParameter("nombre"));
-			usuario.setApellido(request.getParameter("apellido"));	
-			usuario.setCorreo(request.getParameter("correo"));			
-			usuario.setContrasena(request.getParameter("contrasena"));			
-			usuarioDao.create(usuario);			
-			
+			telefono.setId(Integer.valueOf(request.getParameter("id")));
+			telefono.setId_usuario(Integer.valueOf(request.getParameter("id_usuario")));
+			telefono.setNumero(request.getParameter("numero"));
+			telefono.setTipo(request.getParameter("tipo"));
+			telefono.setOperadora(request.getParameter("operadora"));				
+			telefonoDao.create(telefono);						
 			url = "/index.html";
 		} catch (Exception e) {
 			url = "/JSPs/error.jsp";

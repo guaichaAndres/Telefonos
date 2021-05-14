@@ -13,8 +13,8 @@ public class JDBCUsuarioDAO extends JDBCGenericDAO<Usuario, Integer> implements 
 	@Override
 	public void createTable() {
 		conexion.update("DROP TABLE IF EXISTS Usuario");
-		conexion.update("CREATE TABLE Usuario (" + "ID INT NOT NULL, " + "CEDULA VARCHAR(10), "
-				+ "NOMBRE VARCHAR(255), APELLIDO VARCHAR(255), CORREO VARCHAR(255), CONTRASENA VARCHAR(255)" + ", PRIMARY KEY (ID))");
+		conexion.update("CREATE TABLE Usuario (" + "ID_USUARIO INT NOT NULL, " + "CEDULA VARCHAR(10), "
+				+ "NOMBRE VARCHAR(255), APELLIDO VARCHAR(255), CORREO VARCHAR(255), CONTRASENA VARCHAR(255)" + ", PRIMARY KEY (ID_USUARIO))");
 	}
 
 	@Override
