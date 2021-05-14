@@ -11,7 +11,7 @@ import ec.edu.ups.dao.DAOFactory;
 import ec.edu.ups.dao.UsuarioDAO;
 import ec.edu.ups.modelo.Usuario;
 
-@WebServlet("/CrearPersonaController")
+@WebServlet("/CrearUsuarioController")
 public class CrearUsuarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UsuarioDAO usuarioDao;
