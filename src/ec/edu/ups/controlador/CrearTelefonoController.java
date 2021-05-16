@@ -25,14 +25,24 @@ public class CrearTelefonoController extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	
 			throws ServletException, IOException {
+		Usuario user = new Usuario();
+		JDBCUsuarioDAO userdao = new JDBCUsuarioDAO();
+		user= userdao.read((String) request.getSession().getAttribute("clave"));
+		System.out.println(user); 
 		String url = null;
+		
 		try {
-			telefono.setNumero(request.getParameter("numero"));
-			telefono.setTipo(request.getParameter("tipo"));
-			telefono.setOperadora(request.getParameter("operadora"));				
-			telefonoDao.create(telefono);						
-			url = "/index.html";
+			
+				telefono.setNumero(request.getParameter("numero"));
+				telefono.setUsuarioTelefono(user);
+				telefono.setTipo(request.getParameter("tipo"));
+				telefono.setOperadora(request.getParameter("operadora"));				
+				telefonoDao.create(telefono);						
+				url = "/index.html";
+			
+		
 		} catch (Exception e) {
 			url = "/JSPs/error.jsp";
 		}

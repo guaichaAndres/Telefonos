@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Agenda Telefónica</title>
-  <link rel="stylesheet" href="../CSS/estiloIndex.css">
+  <link rel="stylesheet" href="/CSS/estiloIndex.css" type="text/css">
 
 </head>
 <body>

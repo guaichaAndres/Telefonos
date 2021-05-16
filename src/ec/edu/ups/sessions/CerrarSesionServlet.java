@@ -34,7 +34,7 @@ public class CerrarSesionServlet extends HttpServlet {
 		HttpSession sesion = request.getSession();
 		sesion.invalidate();
 		System.out.println("sesion Destruida");
-		RequestDispatcher d = getServletContext().getRequestDispatcher("/login.jsp");
+		RequestDispatcher d = getServletContext().getRequestDispatcher("/JSPs/login.jsp");
 		d.forward(request, response);
 	}
 

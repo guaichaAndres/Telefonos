@@ -5,12 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Java Beans Error</title>
+<title>Bienvenido</title>
   <link rel="stylesheet" href="../CSS/estiloIndex.css">
 </head>
 <body>
-	<h1>Hubo un error</h1>
 	<a href="/Telefonos/index.html">Regresar al Inicio</a>
+	<h1>Bienvenido <%=request.getSession().getAttribute("nombre") %></h1>
+	<a href="/Telefonos/CerrarSesionServlet">Cerrar Sesion</a>
 </body>
 </html>
 

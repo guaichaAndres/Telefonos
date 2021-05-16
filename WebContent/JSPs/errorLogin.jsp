@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Error Login</title>
+  <link rel="stylesheet" href="../CSS/estiloIndex.css">
 </head>
 <body>
 	<h1>Por favor, ingrese sus credenciales correctamente</h1>

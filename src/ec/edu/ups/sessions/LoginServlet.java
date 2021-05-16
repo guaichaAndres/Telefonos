@@ -47,14 +47,14 @@ public class LoginServlet extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("password");
 		user= userdao.read(password);
-		System.out.println(user);
 		
 		
 		if (user!=null && usuario.equals(user.getCorreo()) && password.equals(user.getContrasena())){
 			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("usuario", usuario);
+			sesion.setAttribute("nombre", user.getNombre());
+			sesion.setAttribute("clave", password);
 			System.out.println("sesion TRUE");
-			RequestDispatcher d = getServletContext().getRequestDispatcher("/calculadora.jsp");
+			RequestDispatcher d = getServletContext().getRequestDispatcher("/JSPs/indexInterno.jsp");
 			d.forward(request, response);
 		}else {
 			HttpSession sesion = request.getSession(false);

@@ -22,10 +22,9 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	@Override
 	public void create(Telefono telefono) {
 		Usuario u = new Usuario();
-		System.out.println(u.getCedula());
 		// TODO Auto-generated method stub
-		conexion.update("INSERT into Telefono (tel_numero,tel_tipo,tel_operadora) VALUES ("+ telefono.getNumero()
-		+ ",'" + telefono.getTipo() + "','" + telefono.getOperadora() + "')");
+		conexion.update("INSERT into Telefono (tel_numero,usu_cedula,tel_tipo,tel_operadora) VALUES ("+ telefono.getNumero()
+		+ ",'"+ telefono.getUsuarioTelefono().getCedula() + "','" + telefono.getTipo() + "','" + telefono.getOperadora() + "')");
 	}
 	
 
