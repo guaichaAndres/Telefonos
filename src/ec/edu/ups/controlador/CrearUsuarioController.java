@@ -27,12 +27,11 @@ public class CrearUsuarioController extends HttpServlet {
 		
 		String url = null;
 		try {
-			usuario.setId(Integer.valueOf(request.getParameter("id")));
 			usuario.setCedula(request.getParameter("cedula"));
 			usuario.setNombre(request.getParameter("nombre"));
 			usuario.setApellido(request.getParameter("apellido"));	
 			usuario.setCorreo(request.getParameter("correo"));			
-			usuario.setContrasena(request.getParameter("contrasena"));			
+			usuario.setContrasena(request.getParameter("contrasena"));		
 			usuarioDao.create(usuario);			
 			
 			url = "/index.html";

@@ -6,22 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 import ec.edu.ups.dao.TelefonoDAO;
 import ec.edu.ups.modelo.Telefono;
+import ec.edu.ups.modelo.Usuario;
 
 public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implements TelefonoDAO {
 
 	@Override
 	public void createTable() {
 		conexion.update("DROP TABLE IF EXISTS Telefono");
-		conexion.update("CREATE TABLE Telefono (" + "ID_TELEFONO INT NOT NULL, IDUSUARIO INT NOT NULL, " + "NUMERO VARCHAR(10), "
-				+ "TIPO VARCHAR(255), OPERADORA VARCHAR(255)" + ", PRIMARY KEY (ID_TELEFONO),"
-						+ " FOREIGN KEY (IDUSUARIO) REFERENCES USUARIO(ID_USUARIO))");
+		conexion.update("CREATE TABLE Telefono (tel_codigo INT NOT NULL auto_increment, usu_cedula varchar(255),"
+				+ "tel_numero VARCHAR(10), "
+				+ "tel_tipo VARCHAR(255),tel_operadora VARCHAR(255)" + ", PRIMARY KEY (tel_codigo),"
+						+ " FOREIGN KEY (usu_cedula) REFERENCES USUARIO(usu_cedula))");
 	}
 
 	@Override
 	public void create(Telefono telefono) {
+		Usuario u = new Usuario();
+		System.out.println(u.getCedula());
 		// TODO Auto-generated method stub
-		conexion.update("INSERT Telefono VALUES (" + telefono.getId() + ", '" + telefono.getId_usuario() + "', '"
-				+ telefono.getNumero() + "', '" + telefono.getTipo() + "','" + telefono.getOperadora() + "')");
+		conexion.update("INSERT into Telefono (tel_numero,tel_tipo,tel_operadora) VALUES ("+ telefono.getNumero()
+		+ ",'" + telefono.getTipo() + "','" + telefono.getOperadora() + "')");
 	}
 	
 
@@ -45,6 +49,12 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 
 	@Override
 	public List<Telefono> find() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Telefono read() {
 		// TODO Auto-generated method stub
 		return null;
 	}

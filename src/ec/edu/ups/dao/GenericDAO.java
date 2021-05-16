@@ -20,14 +20,14 @@ import java.util.List;
  *             valor único
  * @version 1.0
  */
-public interface GenericDAO<T, ID> {
+public interface GenericDAO<T, V> {
 
 	public void createTable();
 
 	public void create(T entity);
 
-	public T read(ID id);
-
+	public T read(V id);
+	public T read();
 	public void update(T entity);
 
 	public void delete(T entity);

@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.DAOFactory;
 import ec.edu.ups.dao.TelefonoDAO;
-import ec.edu.ups.dao.UsuarioDAO;
 import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.modelo.Usuario;
+import ec.edu.ups.mysql.jdbc.JDBCUsuarioDAO;
 
 @WebServlet("/CrearTelefonoController")
 public class CrearTelefonoController extends HttpServlet {
@@ -26,11 +26,8 @@ public class CrearTelefonoController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
 		String url = null;
 		try {
-			telefono.setId(Integer.valueOf(request.getParameter("id")));
-			telefono.setId_usuario(Integer.valueOf(request.getParameter("id_usuario")));
 			telefono.setNumero(request.getParameter("numero"));
 			telefono.setTipo(request.getParameter("tipo"));
 			telefono.setOperadora(request.getParameter("operadora"));				

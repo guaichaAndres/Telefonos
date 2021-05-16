@@ -5,34 +5,40 @@ import java.io.Serializable;
 public class Telefono implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private int id;
-	private int id_usuario;
-
-
+	private int codigo;
 	private String numero;
 	private String tipo;
 	private String operadora;
+	private Usuario usuarioTelefono;
+
+	public Usuario getUsuarioTelefono() {
+		return usuarioTelefono;
+	}
+
+	public void setUsuarioTelefono(Usuario usuarioTelefono) {
+		this.usuarioTelefono = usuarioTelefono;
+	}
 
 	public Telefono() {
 		// Constructor obligatorio
 	} 
 
-	public Telefono(int id,int id_usuario, String numero, String tipo, String operadora) { 
+	public Telefono(int codigo,int id_usuario, String numero, String tipo, String operadora) { 
 		// Constructor opcional
-		this.setId(id);
+		this.setCodigo(codigo);
 		this.setNumero(numero);
 		this.setTipo(tipo);
 		this.setOperadora(operadora);
-		this.setId_usuario(id_usuario);
 		
 	}
 
-	public int getId() {
-		return id;
+	
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getNumero() {
@@ -58,13 +64,7 @@ public class Telefono implements Serializable{
 	public void setOperadora(String operadora) {
 		this.operadora = operadora;
 	}
-	public int getId_usuario() {
-		return id_usuario;
-	}
 
-	public void setId_usuario(int id_usuario) {
-		this.id_usuario = id_usuario;
-	}
 
 }
 

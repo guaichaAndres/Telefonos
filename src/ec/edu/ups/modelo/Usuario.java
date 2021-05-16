@@ -1,25 +1,32 @@
 package ec.edu.ups.modelo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private int id;
 	private String cedula;
 	private String nombre;
 	private String apellido;
 	private String correo;
 	private String contrasena;
+	private List<Telefono> telefono;
 
+	public List<Telefono> getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(List<Telefono> telefono) {
+		this.telefono = telefono;
+	}
 
 	public Usuario() {
 		// Constructor obligatorio
 	} 
 
-	public Usuario(int id, String cedula, String nombre, String apellido,String correo, String contrasena) { 
+	public Usuario( String cedula, String nombre, String apellido,String correo, String contrasena) { 
 		// Constructor opcional
-		this.setId(id);
 		this.setCedula(cedula);
 		this.setNombre(nombre);
 		this.setApellido(apellido);
@@ -27,14 +34,6 @@ public class Usuario implements Serializable{
 		this.setContrasena(contrasena);	
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-	
 	public String getCedula() {
 		return cedula;
 	}
@@ -73,6 +72,12 @@ public class Usuario implements Serializable{
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo
+				+ ", contrasena=" + contrasena + ", telefono=" + telefono + "]";
 	}
 }
 
