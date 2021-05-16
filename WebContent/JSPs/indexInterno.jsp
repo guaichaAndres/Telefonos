@@ -12,6 +12,9 @@
 	<a href="/Telefonos/index.html">Regresar al Inicio</a>
 	<h1>Bienvenido <%=request.getSession().getAttribute("nombre") %></h1>
 	<a href="/Telefonos/CerrarSesionServlet">Cerrar Sesion</a>
+	<a href="/Telefonos/HTMLs/registrar_telefono.html">Registrar Teléfonos</a>
+	<a href="/Telefonos/ListarTelefonoController">Listar Teléfonos</a>
+	
 </body>
 </html>
 

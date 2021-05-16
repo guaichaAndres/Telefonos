@@ -35,7 +35,7 @@ public class CrearTelefonoController extends HttpServlet {
 		
 		try {
 			
-				telefono.setNumero(request.getParameter("numero"));
+				telefono.setNumero(Integer.parseInt(request.getParameter("numero")));
 				telefono.setUsuarioTelefono(user);
 				telefono.setTipo(request.getParameter("tipo"));
 				telefono.setOperadora(request.getParameter("operadora"));				

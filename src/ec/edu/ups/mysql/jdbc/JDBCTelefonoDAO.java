@@ -29,9 +29,18 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	
 
 	@Override
-	public Telefono read(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Telefono read(Integer numero) {
+		Telefono telefono = null;
+		ResultSet rs = conexion.query("SELECT * FROM Telefono WHERE tel_numero="  + "'" +numero + "'");
+		try {
+			if (rs != null && rs.next()) {
+				telefono = new Telefono(rs.getInt("tel_codigo"), rs.getInt("tel_numero"),
+						rs.getString("tel_tipo"), rs.getString("tel_operadora"));
+			}
+		} catch (SQLException e) {
+			System.out.println(">>>WARNING (JDBCTelefonoDAO:read): " + e.getMessage());
+		}
+		return telefono;
 	}
 
 	@Override
@@ -48,14 +57,42 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 
 	@Override
 	public List<Telefono> find() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Telefono> list = new ArrayList<Telefono>();
+		ResultSet rs = conexion.query("SELECT * FROM Telefono");
+		try {
+			while (rs.next()) {
+				list.add(new Telefono(rs.getInt("tel_codigo"), rs.getInt("tel_numero"),
+						rs.getString("tel_tipo"),  rs.getString("tel_operadora")));
+			}
+
+		} catch (SQLException e) {
+			System.out.println(">>>WARNING (JDBCTelefonoDAO:find): " + e.getMessage());
+		}
+		return list;
+		
 	}
 
 	@Override
 	public Telefono read() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Telefono> listarCedula(String cedula) {
+		List<Telefono> list = new ArrayList<Telefono>();
+	
+		ResultSet rs = conexion.query("SELECT * FROM Telefono WHERE usu_cedula="+ "'" +cedula + "'");
+		try {
+			while (rs.next()) {
+				list.add(new Telefono(rs.getInt("tel_codigo"), rs.getInt("tel_numero"),
+						rs.getString("tel_tipo"),  rs.getString("tel_operadora")));
+			}
+
+		} catch (SQLException e) {
+			System.out.println(">>>WARNING (JDBCTelefonoDAO:find): " + e.getMessage());
+		}
+		return list;
 	}
 
 	

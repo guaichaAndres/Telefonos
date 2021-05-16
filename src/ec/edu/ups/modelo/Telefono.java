@@ -6,7 +6,7 @@ public class Telefono implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private int codigo;
-	private String numero;
+	private int numero;
 	private String tipo;
 	private String operadora;
 	private Usuario usuarioTelefono;
@@ -23,7 +23,7 @@ public class Telefono implements Serializable{
 		// Constructor obligatorio
 	} 
 
-	public Telefono(int codigo,int id_usuario, String numero, String tipo, String operadora) { 
+	public Telefono(int codigo,int numero, String tipo, String operadora) { 
 		// Constructor opcional
 		this.setCodigo(codigo);
 		this.setNumero(numero);
@@ -41,11 +41,12 @@ public class Telefono implements Serializable{
 		this.codigo = codigo;
 	}
 
-	public String getNumero() {
+	
+	public int getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 

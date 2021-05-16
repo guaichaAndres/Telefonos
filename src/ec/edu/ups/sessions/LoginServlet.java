@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
 		if (user!=null && usuario.equals(user.getCorreo()) && password.equals(user.getContrasena())){
 			HttpSession sesion = request.getSession(true);
 			sesion.setAttribute("nombre", user.getNombre());
+			sesion.setAttribute("cedula", user.getCedula());
 			sesion.setAttribute("clave", password);
 			System.out.println("sesion TRUE");
 			RequestDispatcher d = getServletContext().getRequestDispatcher("/JSPs/indexInterno.jsp");
