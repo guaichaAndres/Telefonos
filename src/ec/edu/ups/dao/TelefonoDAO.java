@@ -11,5 +11,5 @@ import ec.edu.ups.modelo.Usuario;
 public interface TelefonoDAO extends GenericDAO<Telefono, Integer> {
 
 	public List<Telefono> listarCedula(String cedula);
-	
+
 }

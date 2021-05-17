@@ -29,7 +29,7 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	
 
 	@Override
-	public Telefono read(Integer numero) {
+	public  Telefono read(Integer numero) {
 		Telefono telefono = null;
 		ResultSet rs = conexion.query("SELECT * FROM Telefono WHERE tel_numero="  + "'" +numero + "'");
 		try {
@@ -44,9 +44,9 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	}
 
 	@Override
-	public void update(Telefono entity) {
-		// TODO Auto-generated method stub
-		
+	public void update(Telefono telefono) {
+		conexion.update("UPDATE Telefono SET tel_numero = '" + telefono.getNumero() + "', tel_tipo = '" + telefono.getTipo()
+		+ "', tel_operadora = '" + telefono.getOperadora() + "' WHERE usu_cedula = " + telefono.getUsuarioTelefono().getCedula());
 	}
 
 	@Override
