@@ -9,12 +9,20 @@
 <title>Usuario Encontrado</title>
 </head>
 <body>
+
+
+
+
+
+
+
 <c:set var="u" scope="request" value="${usuario}" />
 	<h1>Usuario encontrado</h1>		
 	<p >Cedula: ${u.cedula}</p>
 	<p >Nombre: ${u.nombre}</p>
 	<p >Apellido: ${u.apellido}</p>
-	<p>Correo: ${u.correo}</p>
+	<label for="correo">Contacte a este usuario por su correo: </label>
+	<a class="d-block" href="mailto:contact@yourwebsite.com">${u.correo}</a>
 	
 	<c:set var="lista" scope="request" value="${telefonos}" />
 
@@ -29,7 +37,7 @@
 		<c:forEach var="t" items="${lista}">
 			<tr>
 				<td>${t.codigo}</td>
-				<td>${t.numero}</td>
+			<td><a href="tel:+${t.numero}">${t.numero}</a></td>
 				<td>${t.tipo}</td>
 				<td>${t.operadora}</td>
 				
