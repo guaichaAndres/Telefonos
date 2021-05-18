@@ -9,6 +9,7 @@
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<<<<<<< HEAD
         	  		<link rel="stylesheet" href="../CSS/estiloIndex.css">
         <script type="text/javascript" src="/Telefonos/JS/validaciones.js"></script>
    </head>     	  		
@@ -17,27 +18,35 @@
 <title>Gestión de personas en la Web</title>
   <link rel="stylesheet" href="../CSS/estiloIndex.css">
 >>>>>>> parent of 1251547 (CSS añadidos)
+=======
+        <script type="text/javascript" src="/Telefonos/js/validaciones.js"></script>
+ 		<link rel="stylesheet" href="../CSS/estiloIndex.css">
+>>>>>>> parent of aebfe7c (Commit final)
 <body>
 	<h1>Registrar Usuario</h1>
 	<div class="form">
 	<form action="/Telefonos/CrearUsuarioController" method="post">
 		<label for="cedula">Cedula </label>
-		<input type="text" id="cedula" name="cedula" pattern"{0-9} maxlength="10" onchange="validar()" placeholder="ingrese la cedula..."/>
+		<input type="text" name="cedula" placeholder="ingrese la cedula..."/>
 		<br/>
 		
 		<label for="nombre">Nombre </label>
-		<input type="text" name="nombre" onkeypress="return sololetras(event)" placeholder="ingrese el nombre..."/>			
+		<input type="text" name="nombre" placeholder="ingrese el nombre..."/>			
 		<br/>
 		
 		<label for="apellido">Apellido </label>
-		<input type="text" name="apellido" onkeypress="return sololetras(event)" placeholder="ingrese el apellido..."/>
+		<input type="text" name="apellido" placeholder="ingrese el apellido..."/>
 		<br/>
 			<label for="correo">Correo </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<input type="text" id="correo" name="correo" onchange="validarEmail()"  placeholder="ingrese el correo..."/>
 =======
 		<input type="text" name="correo" placeholder="ingrese el correo..."/>
 >>>>>>> parent of 1251547 (CSS añadidos)
+=======
+		<input type="text" id="correo" name="correo" placeholder="ingrese el correo..."/>
+>>>>>>> parent of aebfe7c (Commit final)
 		<br/>
 			<label for="contrasena">Contraseña </label>
 		<input type="text" name="contrasena" placeholder="ingrese la contraseña..."/>
@@ -45,6 +54,5 @@
 		<button>Aceptar</button>
 	</form>
 	 </div>
-	 
 </body>
 </html>

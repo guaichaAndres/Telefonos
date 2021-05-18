@@ -6,31 +6,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>Telefono Encontrado</title>
 <<<<<<< HEAD
+=======
+>>>>>>> parent of aebfe7c (Commit final)
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="../CSS/estiloIndex.css">
+<link rel="stylesheet" href="../CSS/estiloIndex.css">
+
+<title>Telefono Encontrado</title>
 
 =======
 >>>>>>> parent of 1251547 (CSS aÃ±adidos)
 </head>
 <body>
 	<c:set var="lista" scope="request" value="${telefonos}" />
-	
-	<div id="login" class="container">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="login well well-small">
-                        <div class="center">
 	<h1>Lista de teléfonos de  <%=request.getSession().getAttribute("nombre") %></h1>
-                        </div>
 
-	<table class= "table">
+	<table>
 		<tr>
 			<td><strong>Codigo</strong></td>
 			<td><strong>Numero</strong></td>

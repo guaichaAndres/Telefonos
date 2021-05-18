@@ -26,6 +26,7 @@
 
 li {
   display: inline;
+<<<<<<< HEAD
 }
 
 h1{
@@ -142,4 +143,6 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 >>>>>>> parent of 1251547 (CSS añadidos)
+=======
+>>>>>>> parent of aebfe7c (Commit final)
 }

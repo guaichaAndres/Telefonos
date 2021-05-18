@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Usuario Encontrado</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -16,6 +17,10 @@
   <link rel="stylesheet" href="../CSS/estiloIndex.css">
 =======
 >>>>>>> parent of 1251547 (CSS añadidos)
+=======
+ 		<link rel="stylesheet" href="../CSS/estiloIndex.css">
+
+>>>>>>> parent of aebfe7c (Commit final)
 </head>
 <body>
 
@@ -35,7 +40,7 @@
 	
 	<c:set var="lista" scope="request" value="${telefonos}" />
 
-	<table class= "table">
+	<table>
 		<tr>
 			<td><strong>Codigo</strong></td>
 			<td><strong>Numero</strong></td>
