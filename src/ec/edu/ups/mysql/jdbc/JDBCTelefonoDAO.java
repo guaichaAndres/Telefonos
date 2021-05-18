@@ -50,9 +50,9 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	}
 
 	@Override
-	public void delete(Telefono entity) {
-		// TODO Auto-generated method stub
-		
+	public void delete(Telefono telefono) {
+		conexion.update("DELETE FROM Telefono WHERE tel_numero = " + telefono.getNumero());
+
 	}
 
 	@Override
@@ -85,8 +85,11 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 		ResultSet rs = conexion.query("SELECT * FROM Telefono WHERE usu_cedula="+ "'" +cedula + "'");
 		try {
 			while (rs.next()) {
-				list.add(new Telefono(rs.getInt("tel_codigo"), rs.getInt("tel_numero"),
-						rs.getString("tel_tipo"),  rs.getString("tel_operadora")));
+				list.add(new Telefono(
+						rs.getInt("tel_codigo"),
+						rs.getInt("tel_numero"),
+						rs.getString("tel_tipo"),  
+						rs.getString("tel_operadora")));
 			}
 
 		} catch (SQLException e) {
