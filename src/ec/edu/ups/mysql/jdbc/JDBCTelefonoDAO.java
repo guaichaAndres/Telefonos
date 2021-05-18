@@ -46,7 +46,7 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 	@Override
 	public void update(Telefono telefono) {
 		conexion.update("UPDATE Telefono SET tel_numero = '" + telefono.getNumero() + "', tel_tipo = '" + telefono.getTipo()
-		+ "', tel_operadora = '" + telefono.getOperadora() + "' WHERE usu_cedula = " + telefono.getUsuarioTelefono().getCedula());
+		+ "', tel_operadora = '" + telefono.getOperadora() + "' WHERE tel_codigo = " + telefono.getCodigo());
 	}
 
 	@Override

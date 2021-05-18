@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class Filtro
  */
-@WebFilter({"/Filtro", "/CrearTelefonoController","/CerrarSesionServlet"})
+@WebFilter({"/Filtro","/CerrarSesionServlet"})
 public class Filtro implements Filter {
 
     /**
@@ -43,7 +43,7 @@ public class Filtro implements Filter {
 		if (sesion.getAttribute("usuario") != null) {
 			chain.doFilter(request, response);	
 		}else {
-			((HttpServletResponse)response).sendRedirect("Telefonos/JSPs/noAcreditado.jsp");
+			((HttpServletResponse)response).sendRedirect("/Telefonos/JSPs/noAcreditado.jsp");
 		}
 	}
 
