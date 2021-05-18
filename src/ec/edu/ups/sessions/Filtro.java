@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class Filtro
  */
-@WebFilter({"/Filtro",})
+@WebFilter({"/Filtro","/CerrarSesionServlet"})
 public class Filtro implements Filter {
 
     /**

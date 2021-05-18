@@ -22,6 +22,6 @@
                         </div>	
                         <h2>Intente nuevamente</h2>
 	
-	<a href="/Telefonos/indexInterno.jsp">Regresar</a>
+	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar</a>
 </body>
 </html>

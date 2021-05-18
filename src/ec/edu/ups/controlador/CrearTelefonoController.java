@@ -40,7 +40,7 @@ public class CrearTelefonoController extends HttpServlet {
 				telefono.setTipo(request.getParameter("tipo"));
 				telefono.setOperadora(request.getParameter("operadora"));				
 				telefonoDao.create(telefono);						
-				url = "/indexInterno.jsp";
+				url = "/index.html";
 			
 		
 		} catch (Exception e) {
