@@ -7,12 +7,19 @@
 <head>
 <meta charset="UTF-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <title>Telefono Encontrado</title>
 <<<<<<< HEAD
 =======
 >>>>>>> parent of aebfe7c (Commit final)
 
 <link rel="stylesheet" href="../CSS/estiloIndex.css">
+=======
+
+<link rel="stylesheet" href="../CSS/estiloIndex.css">
+
+<title>Telefono Encontrado</title>
+>>>>>>> parent of aebfe7c (Commit final)
 
 <title>Telefono Encontrado</title>
 
