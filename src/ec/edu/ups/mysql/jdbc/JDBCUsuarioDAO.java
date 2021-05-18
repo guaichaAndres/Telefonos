@@ -82,8 +82,38 @@ public class JDBCUsuarioDAO extends JDBCGenericDAO<Usuario, String> implements U
 	}
 
 	@Override
-	public Usuario read() {
-		return null;
+	public Usuario readCedula(String cedula) {
+		Usuario usuario = null;
+		ResultSet rs = conexion.query("SELECT * FROM Usuario WHERE usu_cedula="  + "'" +cedula + "'");
+		try {
+			if (rs != null && rs.next()) {
+				usuario = new Usuario(rs.getString("usu_cedula"), rs.getString("usu_nombre"),
+						rs.getString("usu_apellido"), rs.getString("usu_correo"), rs.getString("usu_contrasena"));
+			}
+		} catch (SQLException e) {
+			System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage());
+		}
+		return usuario;
 	}
+
+	@Override
+	public Usuario readCorreo(String correo) {
+		Usuario usuario = null;
+		ResultSet rs = conexion.query("SELECT * FROM Usuario WHERE usu_correo="  + "'" +correo + "'");
+		try {
+			if (rs != null && rs.next()) {
+				usuario = new Usuario(
+						rs.getString("usu_cedula"),
+						rs.getString("usu_nombre"),
+						rs.getString("usu_apellido"), 
+						rs.getString("usu_correo"), 
+						rs.getString("usu_contrasena"));
+			}
+		} catch (SQLException e) {
+			System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage());
+		}
+		return usuario;
+	}
+
 
 }

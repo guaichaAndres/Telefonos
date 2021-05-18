@@ -20,8 +20,8 @@ import ec.edu.ups.modelo.Usuario;
 /**
  * Servlet implementation class ListarPersonaController
  */
-@WebServlet("/ListarTelefonoUsuarioController")
-public class ListarTelefonoUsuarioController extends HttpServlet {
+@WebServlet("/ListarTelefonoUsuarioCorreoController")
+public class ListarTelefonoUsuarioCorreoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UsuarioDAO usuarioDao;
 	private Usuario usuario;
@@ -29,7 +29,7 @@ public class ListarTelefonoUsuarioController extends HttpServlet {
 	private List<Telefono> listaTelefono;
 	
 
-	public ListarTelefonoUsuarioController() {
+	public ListarTelefonoUsuarioCorreoController() {
 		telefonoDao = DAOFactory.getFactory().getTelefonoDAO();
 		usuarioDao = DAOFactory.getFactory().getUsuarioDAO();
 
@@ -40,9 +40,9 @@ public class ListarTelefonoUsuarioController extends HttpServlet {
 			throws ServletException, IOException {
 		String url = null;
 		try {
-			usuario = usuarioDao.readCedula(request.getParameter("cedula"));
+			usuario = usuarioDao.readCorreo(request.getParameter("correo"));
 			request.setAttribute("usuario", usuario);
-			listaTelefono = telefonoDao.listarCedula(request.getParameter("cedula"));
+			listaTelefono = telefonoDao.listarCedula(usuario.getCedula());
 			usuario.setTelefono(listaTelefono);
 			System.out.println("Tamaño de la lista recuperada: " + listaTelefono.size());
 			request.setAttribute("telefonos", usuario.getTelefono());

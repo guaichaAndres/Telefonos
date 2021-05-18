@@ -72,11 +72,7 @@ public class JDBCTelefonoDAO extends JDBCGenericDAO<Telefono, Integer> implement
 		
 	}
 
-	@Override
-	public Telefono read() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	@Override
 	public List<Telefono> listarCedula(String cedula) {

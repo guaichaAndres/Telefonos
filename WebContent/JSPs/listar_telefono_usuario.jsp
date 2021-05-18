@@ -6,9 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Telefono Encontrado</title>
+<title>Usuario Encontrado</title>
 </head>
 <body>
+<c:set var="u" scope="request" value="${usuario}" />
+	<h1>Usuario encontrado</h1>		
+	<p >Cedula: ${u.cedula}</p>
+	<p >Nombre: ${u.nombre}</p>
+	<p >Apellido: ${u.apellido}</p>
+	<p>Correo: ${u.correo}</p>
+	
 	<c:set var="lista" scope="request" value="${telefonos}" />
 
 	<table>

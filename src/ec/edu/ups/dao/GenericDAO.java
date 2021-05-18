@@ -27,7 +27,6 @@ public interface GenericDAO<T, V> {
 	public void create(T entity);
 
 	public T read(V id);
-	public T read();
 	public void update(T entity);
 
 	public void delete(T entity);

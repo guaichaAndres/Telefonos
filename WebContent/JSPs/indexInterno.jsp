@@ -16,7 +16,7 @@
 	<a href="/Telefonos/HTMLs/buscar_telefono.html">Buscar Teléfono</a>
 	<a href="/Telefonos/ListarTelefonoController">Listar Teléfonos</a>
 	<a href="/Telefonos/HTMLs/buscar_usuario.html">Buscar Usuarios</a>
-	<a class="btn btn-primary" href="/Telefonos/HTMLs/eliminar_telefono.html" role="button">Eliminar este registro</a>
+	<a class="btn btn-primary" href="/Telefonos/HTMLs/eliminar_telefono.html" role="button">Eliminar número registrado</a>
 	
 	
 </body>
