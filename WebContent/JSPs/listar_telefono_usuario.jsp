@@ -10,12 +10,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c43a4c4 (commit FInal 1)
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="../CSS/estiloIndex.css">
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1251547 (CSS añadidos)
 =======
@@ -26,12 +30,10 @@
  		<link rel="stylesheet" href="../CSS/estiloIndex.css">
 
 >>>>>>> parent of aebfe7c (Commit final)
+=======
+>>>>>>> parent of c43a4c4 (commit FInal 1)
 </head>
 <body>
-
-
-
-
 
 
 
@@ -63,7 +65,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar al index</a>
+	<a href="indexInterno.jsp">Regresar al index</a>
 
 </body>
 </html>

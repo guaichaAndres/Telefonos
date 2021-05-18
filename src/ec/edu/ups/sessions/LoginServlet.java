@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 			sesion.setAttribute("cedula", user.getCedula());
 			sesion.setAttribute("clave", password);
 			System.out.println("sesion TRUE");
-			RequestDispatcher d = getServletContext().getRequestDispatcher("/JSPs/indexInterno.jsp");
+			RequestDispatcher d = getServletContext().getRequestDispatcher("/indexInterno.jsp");
 			d.forward(request, response);
 		}else {
 			HttpSession sesion = request.getSession(false);

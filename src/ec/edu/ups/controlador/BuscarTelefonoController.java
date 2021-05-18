@@ -34,7 +34,7 @@ public class BuscarTelefonoController extends HttpServlet {
 			int numero = Integer.valueOf(request.getParameter("numero"));
 			telefono = telefonoDao.read(numero);
 			if (telefono==null){
-				url = "/JSPs/noEncontrado.jsp";
+				url = "/Telefonos/JSPs/noEncontrado.jsp";
 
 			}else {
 				request.setAttribute("telefono", telefono);

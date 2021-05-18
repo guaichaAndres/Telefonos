@@ -1,7 +1,26 @@
-@charset "ISO-8859-1";
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+                background-image: url('http://bloggingexperiment.com/wp-content/uploads/am/contents/2009/08/OS-X-Wallpaper.jpg');
+                font-family: 'Raleway', sans-serif;
+                background-size: cover;
+            }
+            .container{
+                margin-top: 13%;
+                height: 250px;
+                opacity: 0.8;
+                border-radius: 8px;
+            }
+            #login img{
+                margin: 10px 0;
+            }
+            #login .center {
+                text-align: center;
+            }
 
-<<<<<<< HEAD
+            #login .login {
+                max-width: 300px;
+                margin: 35px auto;
+            }
+
             #login .login-form{
             padding:0px 25px;
             }
@@ -37,6 +56,7 @@ h1{
 h2{
 	text-align:center;
 	
+<<<<<<< HEAD
 =======
 .login-page {
   width: 360px;
@@ -148,4 +168,6 @@ h1 {
 >>>>>>> parent of aebfe7c (Commit final)
 =======
 >>>>>>> parent of aebfe7c (Commit final)
+=======
+>>>>>>> parent of c43a4c4 (commit FInal 1)
 }

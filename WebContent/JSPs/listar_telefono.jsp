@@ -10,11 +10,14 @@
 <<<<<<< HEAD
 <title>Telefono Encontrado</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of aebfe7c (Commit final)
 
 <link rel="stylesheet" href="../CSS/estiloIndex.css">
 =======
+=======
+>>>>>>> parent of c43a4c4 (commit FInal 1)
 
 <link rel="stylesheet" href="../CSS/estiloIndex.css">
 
@@ -23,8 +26,6 @@
 
 <title>Telefono Encontrado</title>
 
-=======
->>>>>>> parent of 1251547 (CSS añadidos)
 </head>
 <body>
 	<c:set var="lista" scope="request" value="${telefonos}" />
@@ -48,7 +49,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar al index</a>
+	<a href="indexInterno.jsp">Regresar al index</a>
 
 </body>
 </html>

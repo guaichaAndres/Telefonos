@@ -11,6 +11,6 @@
 	<h1>No se ha encontrado ningún registro que coincida con la búsqueda</h1>
 	<h2>Intente nuevamente</h2>
 	
-	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar</a>
+	<a href="/Telefonos/indexInterno.jsp">Regresar</a>
 </body>
 </html>
