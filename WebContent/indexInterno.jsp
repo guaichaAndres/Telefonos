@@ -6,15 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Bienvenido</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="CSS/estiloIndex.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+ 
 </head>
 <body>
+<div class="panel panel-default">
+  <div class="panel-body">
+  
+<h1>Bienvenido <%=request.getSession().getAttribute("nombre") %> <span class="add-on"><i class="fa fa-user-circle" aria-hidden="true"></i></span></h1>  </div>
+
+<a class="btn btn-outline-primary" href="/Telefonos/CerrarSesionServlet" role="button">Cerrar Sesion</a>
+</div>
+
 <ul>
  
-	<li><h1>Bienvenido <%=request.getSession().getAttribute("nombre") %></h1>
-	<li><a class="btn btn-primary"href="/Telefonos/CerrarSesionServlet" role="button">Cerrar Sesion</a></li>
 	<li><a class="btn btn-primary"href="/Telefonos/HTMLs/registrar_telefono.html" role="button">Registrar Teléfonos</a></li>
 	<li><a class="btn btn-primary" href="/Telefonos/HTMLs/buscar_telefono.html"role="button">Buscar Teléfono</a></li>
 	<li><a class="btn btn-primary" href="/Telefonos/ListarTelefonoController" role="button">Listar Teléfonos</a></li>

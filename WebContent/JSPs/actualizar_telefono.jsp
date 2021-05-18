@@ -7,9 +7,21 @@
 <head>
 <meta charset="UTF-8">
 <title>GestiÃ³n de personas en la Web</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="../CSS/estiloIndex.css">
 </head>
 <body>
-	<h1>Actualizar TelÃ©fono</h1>
+<div id="login" class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="login well well-small">
+                        <div class="center">
+	<h1>Actualizar Teléfono</h1>
+                        </div>	
 	<form action="/Telefonos/ActualizarTelefonoController" method="post">
 	<label for="codigo"> Ingresar código: </label>
 		<input type="text" name="codigo" placeholer="ingrese el numero..."/>
