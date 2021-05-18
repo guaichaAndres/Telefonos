@@ -2,10 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Gestión de personas en la Web</title>
-  <link rel="stylesheet" href="../CSS/estiloIndex.css">
+<title>Registrar Usuario</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <script type="text/javascript" src="/Telefonos/js/validaciones.js"></script>
+ 		<link rel="stylesheet" href="../CSS/estiloIndex.css">
 <body>
-	<h1>Registrar Usuario</h1>
+	<div id="login" class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="login well well-small">
+                        <div class="center">
+                            <h1>Registrar Usuarios</h1>                         
+                        </div>
 	<div class="form">
 	<form action="/Telefonos/CrearUsuarioController" method="post">
 		<label for="cedula">Cedula </label>
@@ -20,7 +32,7 @@
 		<input type="text" name="apellido" placeholder="ingrese el apellido..."/>
 		<br/>
 			<label for="correo">Correo </label>
-		<input type="text" name="correo" placeholder="ingrese el correo..."/>
+		<input type="text" id="correo" name="correo" placeholder="ingrese el correo..."/>
 		<br/>
 			<label for="contrasena">Contraseña </label>
 		<input type="text" name="contrasena" placeholder="ingrese la contraseña..."/>

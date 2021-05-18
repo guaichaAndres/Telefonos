@@ -35,7 +35,7 @@ public class EliminarTelefonoController extends HttpServlet {
 			telefono.setNumero(Integer.valueOf(request.getParameter("numero")));			
 			telefonoDao.delete(telefono);
 
-			url = "/JSPs/indexInterno.jsp";
+			url = "/indexInterno.jsp";
 		} catch (Exception e) {
 			url = "/JSPs/error.jsp";
 		}

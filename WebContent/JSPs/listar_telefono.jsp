@@ -6,7 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link rel="stylesheet" href="../CSS/estiloIndex.css">
+
 <title>Telefono Encontrado</title>
+
 </head>
 <body>
 	<c:set var="lista" scope="request" value="${telefonos}" />
@@ -30,7 +34,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar al index</a>
+	<a href="indexInterno.jsp">Regresar al index</a>
 
 </body>
 </html>

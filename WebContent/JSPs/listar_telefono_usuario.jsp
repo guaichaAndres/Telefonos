@@ -7,12 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Usuario Encontrado</title>
+ 		<link rel="stylesheet" href="../CSS/estiloIndex.css">
+
 </head>
 <body>
-
-
-
-
 
 
 
@@ -44,7 +42,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/Telefonos/JSPs/indexInterno.jsp">Regresar al index</a>
+	<a href="indexInterno.jsp">Regresar al index</a>
 
 </body>
 </html>

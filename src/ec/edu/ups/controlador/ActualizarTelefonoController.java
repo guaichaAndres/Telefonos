@@ -36,11 +36,11 @@ public class ActualizarTelefonoController extends HttpServlet {
 				telefono.setTipo(request.getParameter("tipo"));
 				telefono.setOperadora(request.getParameter("operadora"));
 				telefonoDao.update(telefono);
-				url = "/JSPs/indexInterno.jsp";			
+				url = "/indexInterno.jsp";			
 			
 		
 		} catch (Exception e) {
-			url = "/JSPs/error.jsp";
+			url = "/Telefonos/JSPs/error.jsp";
 		}
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
